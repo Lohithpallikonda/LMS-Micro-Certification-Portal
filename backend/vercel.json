@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "micro-cert-backend",
+  "builds": [
+    { "src": "src/index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "src/index.js" },
+    { "src": "/(.*)", "status": 404, "dest": "src/index.js" }
+  ]
+}
